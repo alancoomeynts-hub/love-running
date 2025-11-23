@@ -5,7 +5,14 @@
     margin:0;
     box-sizing: border-box ;
 }
-
+/* general style*/
+body{
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    /* generic project style*/
+    color: #3a3a3a;
+}
 /*Header*/
 header{
     background-color: lightcoral;
@@ -14,6 +21,10 @@ header{
 /*main*/
 main{
     background-color: lightblue;
+    flex: 1 0 auto; 
+    /* prevent main element from shrinking below initial size even if container is smaller.
+     Sized according to content and can grow to fill space proportionally with other elements in flex box*/
+    
 }
 
 /*footer*/
