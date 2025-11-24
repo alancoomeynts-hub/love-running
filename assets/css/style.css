@@ -32,10 +32,20 @@ header{
     /* box shadow adds shadow effects around element frame. 1st value is horizontal offset negative offset to left, positive to the right. 
     not needed as element is full width. 2nd value is vertical offset (positive below element, negative above).
     3rd value sets blur, how hard or sof tthe shaodw is. 4th is color value. in this we use color that match body text color.*/
-    
+
 }
+
+header a{
+    /* any anchor descended from a header element*/
+    text-decoration: none; /* remove line under title*/
+    color:inherit; /* inherit color from body, remove default text color of links added by the browser.*/
+}
+
 h1{
     font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px; /*adds spacing between characters */
+    color: #252525;
 }
 
 /*main*/
