@@ -23,7 +23,16 @@ body{
 }
 /*Header*/
 header{
-    background-color: lightcoral;
+    background-color: #ffffff;
+    padding: 0 1rem;
+    position:fixed;
+    z-index:99;
+    width:100%;
+    box-shadow:0 2px 2px #3a3a3a;
+    /* box shadow adds shadow effects around element frame. 1st value is horizontal offset negative offset to left, positive to the right. 
+    not needed as element is full width. 2nd value is vertical offset (positive below element, negative above).
+    3rd value sets blur, how hard or sof tthe shaodw is. 4th is color value. in this we use color that match body text color.*/
+    
 }
 h1{
     font-family: 'Oswald', sans-serif;
@@ -33,7 +42,7 @@ h1{
 main{
     background-color: lightblue;
     flex: 1 0 auto; 
-    /* prevent main element from shrinking below initial size even if container is smaller.
+    /* (note default for flex grow is 0 and flex shrink is 0) prevent main element from shrinking below initial size even if container is smaller.
      Sized according to content and can grow to fill space proportionally with other elements in flex box*/
     
 }
