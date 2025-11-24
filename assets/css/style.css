@@ -32,7 +32,9 @@ header{
     /* box shadow adds shadow effects around element frame. 1st value is horizontal offset negative offset to left, positive to the right. 
     not needed as element is full width. 2nd value is vertical offset (positive below element, negative above).
     3rd value sets blur, how hard or sof tthe shaodw is. 4th is color value. in this we use color that match body text color.*/
-
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
 }
 
 header a{
@@ -72,6 +74,19 @@ nav{
     padding:0 1rem;
     left:0;
     display: none;
+    top:100%; /* this tells an element to start at the bottom of its parent */
+}
+/* Nav Toggle */
+#nav-toggle:checked~nav{
+    display: block;
+
+}
+#nav-toggle{
+    display: none;
+}
+.nav-toggle-label{
+    font-size: 2rem;
+
 }
 /*main*/
 main{
