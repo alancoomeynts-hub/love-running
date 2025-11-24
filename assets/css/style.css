@@ -92,8 +92,11 @@ nav{
 main{
     background-color: lightblue;
     flex: 1 0 auto; 
+     
     /* (note default for flex grow is 0 and flex shrink is 0) prevent main element from shrinking below initial size even if container is smaller.
      Sized according to content and can grow to fill space proportionally with other elements in flex box*/
+
+    margin-top: 47px; /* add margin top to main to prevent content being hidden behind fixed header */
     
 }
 
