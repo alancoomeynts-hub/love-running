@@ -51,7 +51,7 @@ h1{
 }
 
 #menu{
-    font-size:110%;
+    font-size:110%; 
     letter-spacing: 4px;
     list-style-type: none;
 
@@ -90,7 +90,7 @@ nav{
 }
 /*main*/
 main{
-    background-color: lightblue;
+    background-color: lightblue; 
     flex: 1 0 auto; 
      
     /* (note default for flex grow is 0 and flex shrink is 0) prevent main element from shrinking below initial size even if container is smaller.
@@ -103,4 +103,29 @@ main{
 /*footer*/
 footer{
     background-color: orange;
+}
+
+/* Media Query: tablet and up*/
+@media screen and (min-width: 768px){
+    /*Header*/
+    nav{
+        position: relative; /*set position back to relative for larger screens */
+        box-shadow: none;
+        width: fit-content;
+        padding-right:1rem;
+        display: block;
+
+    }
+
+    #menu{
+        display:flex;
+
+    }
+    #menu>li{
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label{
+        display: none;
+    }
 }
