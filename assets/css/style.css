@@ -149,6 +149,7 @@ main{
     main{
         margin-top: 79px; /* increase top margin for larger header on larger screens */
     }
+}
 /* Media Query: laptop and up*/
 @media screen and (min-width: 992px){
 
