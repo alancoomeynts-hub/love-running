@@ -1,5 +1,3 @@
-
-
 /*Google Fonts*/
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
@@ -9,181 +7,238 @@
 
 * {
     padding: 0;
-    margin:0;
-    box-sizing: border-box ;
+    margin: 0;
+    box-sizing: border-box;
 }
+
 /* general style*/
-body{
-    min-height:100vh;
+body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     /* generic project style*/
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
-h1,h2,h3{
+
+h1,
+h2,
+h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 2px; /*adds spacing between characters */
+    letter-spacing: 2px;
+    /*adds spacing between characters */
     color: #252525;
 }
 
 /*Header*/
-header{
+header {
     background-color: #ffffff;
     padding: 0 1rem;
-    position:fixed;
-    z-index:99;
-    width:100%;
-    box-shadow:0 2px 2px #3a3a3a;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
     /* box shadow adds shadow effects around element frame. 1st value is horizontal offset negative offset to left, positive to the right. 
     not needed as element is full width. 2nd value is vertical offset (positive below element, negative above).
     3rd value sets blur, how hard or sof tthe shaodw is. 4th is color value. in this we use color that match body text color.*/
     display: flex;
     justify-content: space-between;
-    align-items:baseline;
+    align-items: baseline;
 }
 
-header a{
+header a {
     /* any anchor descended from a header element*/
-    text-decoration: none; /* remove line under title*/
-    color:inherit; /* inherit color from body, remove default text color of links added by the browser.*/
+    text-decoration: none;
+    /* remove line under title*/
+    color: inherit;
+    /* inherit color from body, remove default text color of links added by the browser.*/
 }
 
 
-#menu{
-    font-size:110%; 
+#menu {
+    font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 
 }
-#menu >li{
+
+#menu>li {
     /* target list elements descending from element with ID menu*/
     margin-bottom: 1em;
 
 }
-.active{
+
+.active {
     border-bottom: 1px solid #3a3a3a;
 
 }
+
 /*navbar styles with dropdown toggle */
-nav{
-    position: absolute; /*remove nav from normal page flow structure. Positioned to the nearest positioned ancestor i.e. the header */
+nav {
+    position: absolute;
+    /*remove nav from normal page flow structure. Positioned to the nearest positioned ancestor i.e. the header */
     background-color: #ffffff;
-    width:100%;
-    box-shadow:0 2px 2px #3a3a3a;
-    padding:0 1rem;
-    left:0;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    padding: 0 1rem;
+    left: 0;
     display: none;
-    top:100%; /* this tells an element to start at the bottom of its parent */
+    top: 100%;
+    /* this tells an element to start at the bottom of its parent */
 }
+
 /* Nav Toggle */
-#nav-toggle:checked~nav{
+#nav-toggle:checked~nav {
     display: block;
 
 }
-#nav-toggle{
+
+#nav-toggle {
     display: none;
 }
-.nav-toggle-label{
+
+.nav-toggle-label {
     font-size: 2rem;
 
 }
+
 /*main*/
-main{
-    
-    flex: 1 0 auto; 
-     
+main {
+
+    flex: 1 0 auto;
+
     /* (note default for flex grow is 0 and flex shrink is 0) prevent main element from shrinking below initial size even if container is smaller.
      Sized according to content and can grow to fill space proportionally with other elements in flex box*/
 
-    margin-top: 47px; /* add margin top to main to prevent content being hidden behind fixed header */
-    
-}
-#hero{
- height: 766px;
- width:100%;
- background: url(../images/hero-image.webp) no-repeat center center/cover;
- position: relative;
+    margin-top: 47px;
+    /* add margin top to main to prevent content being hidden behind fixed header */
 
 }
 
-#cover-text{
-   background-color: rgba(241, 109, 107, 0.7); /* semi transparent background color using rgba */
-    font-size:130%;
-    position:absolute;
-    bottom:30px;
-    width:80%;
+#hero {
+    height: 766px;
+    width: 100%;
+    background: url(../images/hero-image.webp) no-repeat center center/cover;
+    position: relative;
+
+}
+
+#cover-text {
+    background-color: rgba(241, 109, 107, 0.7);
+    /* semi transparent background color using rgba */
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
     min-height: 200px;
-    padding-top:40px;
+    padding-top: 40px;
     padding-left: 10px;
 }
-#cover-text>h2, #cover-text>h3{
-    color:#ffffff;
-    
+
+#cover-text>h2,
+#cover-text>h3 {
+    color: #ffffff;
+
+}
+
+/* Reasons Section*/
+#reasons {
+    margin: 20px auto;
+    width: 90%;
+
+}
+
+#reasons h2 {
+    font-size: 280%;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+#benefits-physical>div,
+#benefits-mental>div {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#benefits hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
 }
 
 /*Footer*/
-#social-networks{
+#social-networks {
     text-align: center;
-    padding:20px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
 
 }
 
-#social-networks i{
-    font-size: 160%; /* increase icon size icons treated as text*/
-    padding:5%;
-    color:#3a3a3a;
+#social-networks i {
+    font-size: 160%;
+    /* increase icon size icons treated as text*/
+    padding: 5%;
+    color: #3a3a3a;
 
 
 }
+
 /* Media Query: tablet and up*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
+
     /*Header*/
-    nav{
-        position: relative; /*set position back to relative for larger screens */
+    nav {
+        position: relative;
+        /*set position back to relative for larger screens */
         box-shadow: none;
         width: fit-content;
-        padding-right:1rem;
+        padding-right: 1rem;
         display: block;
 
     }
 
-    #menu{
-        display:flex;
+    #menu {
+        display: flex;
 
     }
-    #menu>li{
+
+    #menu>li {
         padding-left: 1rem;
     }
 
-    .nav-toggle-label{
+    .nav-toggle-label {
         display: none;
     }
 
-    #logo{
+    #logo {
         font-size: 280%;
-        line-height: 75px; 
+        line-height: 75px;
         margin: 0 0.5rem;
     }
 
-    main{
-        margin-top: 79px; /* increase top margin for larger header on larger screens */
+    main {
+        margin-top: 79px;
+        /* increase top margin for larger header on larger screens */
     }
 
-    #cover-text{
-        width:300px;
+    #cover-text {
+        width: 300px;
         right: 50px;
     }
 }
-/* Media Query: laptop and up*/
-@media screen and (min-width: 992px){
 
-    #menu a:hover{
+/* Media Query: laptop and up*/
+@media screen and (min-width: 992px) {
+
+    #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
- 
+
 }
