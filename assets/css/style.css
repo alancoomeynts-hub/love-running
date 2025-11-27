@@ -21,6 +21,13 @@ body{
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
+h1,h2,h3{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px; /*adds spacing between characters */
+    color: #252525;
+}
+
 /*Header*/
 header{
     background-color: #ffffff;
@@ -43,12 +50,6 @@ header a{
     color:inherit; /* inherit color from body, remove default text color of links added by the browser.*/
 }
 
-h1{
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px; /*adds spacing between characters */
-    color: #252525;
-}
 
 #menu{
     font-size:110%; 
@@ -100,11 +101,29 @@ main{
     
 }
 #hero{
- height: 700px;
+ height: 766px;
  width:100%;
  background: url(../images/hero-image.webp) no-repeat center center/cover;
+ position: relative;
 
 }
+
+#cover-text{
+   background-color: rgba(241, 109, 107, 0.7); /* semi transparent background color using rgba */
+    font-size:130%;
+    position:absolute;
+    bottom:30px;
+    width:80%;
+    min-height: 200px;
+    padding-top:40px;
+    padding-left: 10px;
+}
+#cover-text>h2, #cover-text>h3{
+    color:#ffffff;
+    
+}
+
+/*Footer*/
 #social-networks{
     text-align: center;
     padding:20px 0;
@@ -154,11 +173,16 @@ main{
     main{
         margin-top: 79px; /* increase top margin for larger header on larger screens */
     }
+
+    #cover-text{
+        width:300px;
+        right: 50px;
+    }
 }
 /* Media Query: laptop and up*/
 @media screen and (min-width: 992px){
 
-    #menu>a:hover{
+    #menu a:hover{
         border-bottom: 1px solid #3a3a3a;
     }
  
