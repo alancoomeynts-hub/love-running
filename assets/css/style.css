@@ -203,6 +203,24 @@ main {
     color: #3a3a3a;
 }
 
+#times{
+    background: url('../images/dublin-city.webp') no-repeat center center/cover;
+    display: flex;
+    flex-wrap:wrap;
+}
+#times div{
+    color: #fafafa;
+    background-color: rgb(0,0,0,0.6); /* semi transparent black background to provide contrast for text*/
+    padding: 15px;
+    text-align: center;
+    /* this will not wrap below 400px. Each div expands to fill available space on the row */
+    flex-basis: 200px;
+    flex-grow: 1;
+    border: 2px solid white; /* add white border to separate divs into a grid */
+}
+#times h3{
+    color: #fafafa; /* override header color to white for contrast against dark background image, h3 color set previous by h1,h2,h3 style in header above*/
+}
 /* Media Query: tablet and up*/
 @media screen and (min-width: 768px) {
 
