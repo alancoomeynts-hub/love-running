@@ -192,7 +192,15 @@ main {
     justify-content: center;
     align-items: center;
 }
+/* Gallery Page Styles*/
+#photos img{
+    width:100%; /* this takes care of overflow caused by default images.Set width to width of screen*/
+    line-height: 1em; /* set line height to normal to prevent gaps below images. Ensure alt text not displaced.*/
+}
 
+#photos{
+    line-height: 0; /* remove small gaps between images caused by inline-block display*/
+}
 /*Footer*/
 #social-networks {
     text-align: center;
