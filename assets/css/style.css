@@ -21,14 +21,17 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     /*adds spacing between characters */
     color: #252525;
 }
-.hidden-heading{
+
+.hidden-heading {
     display: none;
 }
 
@@ -171,6 +174,7 @@ main {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
+
 #circle-cover-bg {
     background: url('../images/reasons-image.webp') no-repeat top center / cover;
     height: 90vw;
@@ -182,11 +186,13 @@ main {
     border-radius: 50%;
     /* make div a circle */
 }
+
 #benefits-image {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /*Footer*/
 #social-networks {
     text-align: center;
@@ -204,24 +210,30 @@ main {
     color: #3a3a3a;
 }
 
-#times{
+#times {
     background: url('../images/dublin-city.webp') no-repeat center center/cover;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
-#times div{
+
+#times div {
     color: #fafafa;
-    background-color: rgb(0,0,0,0.6); /* semi transparent black background to provide contrast for text*/
+    background-color: rgb(0, 0, 0, 0.6);
+    /* semi transparent black background to provide contrast for text*/
     padding: 15px;
     text-align: center;
     /* this will not wrap below 400px. Each div expands to fill available space on the row */
     flex-basis: 200px;
     flex-grow: 1;
-    border: 2px solid white; /* add white border to separate divs into a grid */
+    border: 2px solid white;
+    /* add white border to separate divs into a grid */
 }
-#times h3{
-    color: #fafafa; /* override header color to white for contrast against dark background image, h3 color set previous by h1,h2,h3 style in header above*/
+
+#times h3 {
+    color: #fafafa;
+    /* override header color to white for contrast against dark background image, h3 color set previous by h1,h2,h3 style in header above*/
 }
+
 /* Media Query: tablet and up*/
 @media screen and (min-width: 768px) {
 
@@ -264,17 +276,20 @@ main {
         width: 300px;
         right: 50px;
     }
+
     #benefits-physical,
     #benefits-mental {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
-     #benefits-physical>div,
-    #benefits-mental>div{
-        width:75%;
+
+    #benefits-physical>div,
+    #benefits-mental>div {
+        width: 75%;
     }
-    #benefits-mental>div{
+
+    #benefits-mental>div {
         text-align: end;
         align-self: flex-end;
     }
@@ -289,13 +304,14 @@ main {
 
 
 }
+
 @media screen and (min-width:1200px) {
-   #benefits {
+    #benefits {
         display: flex;
         flex-direction: row;
     }
 
-    #benefits > div {
+    #benefits>div {
         flex: 1;
     }
 
@@ -307,11 +323,11 @@ main {
         order: 1;
     }
 
-    #benefits-mental > div {
+    #benefits-mental>div {
         align-self: flex-start;
     }
 
-    #benefits-physical > div {
+    #benefits-physical>div {
         align-self: flex-end;
     }
 }
