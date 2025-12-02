@@ -241,6 +241,13 @@ main {
     color: #fafafa;
     /* override header color to white for contrast against dark background image, h3 color set previous by h1,h2,h3 style in header above*/
 }
+@media screen and (min-width: 576px){
+    #photos {
+    column-count:2; /* two columns for small screens and up */
+    column-gap:0px; /* 0 gap between columns */
+    }
+}
+    
 
 /* Media Query: tablet and up*/
 @media screen and (min-width: 768px) {
@@ -301,6 +308,11 @@ main {
         text-align: end;
         align-self: flex-end;
     }
+
+    #photos {
+        column-count:3; /* three columns for medium screens and up */
+        column-gap:0px; /* 0px gap between columns */
+    }
 }
 
 /* Media Query: laptop and up*/
@@ -309,7 +321,10 @@ main {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
-
+    #photos {
+        column-count:4; /* four columns for large screens and up */
+        column-gap:0px; /* 0px gap between columns */
+    }
 
 }
 
