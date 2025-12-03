@@ -193,63 +193,73 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 /* Gallery Page Styles*/
-#photos img{
-    width:100%; /* this takes care of overflow caused by default images.Set width to width of screen*/
-    line-height: 1em; /* set line height to normal to prevent gaps below images. Ensure alt text not displaced.*/
+#photos img {
+    width: 100%;
+    /* this takes care of overflow caused by default images.Set width to width of screen*/
+    line-height: 1em;
+    /* set line height to normal to prevent gaps below images. Ensure alt text not displaced.*/
 }
 
-#photos{
-    line-height: 0; /* remove small gaps between images caused by inline-block display*/
+#photos {
+    line-height: 0;
+    /* remove small gaps between images caused by inline-block display*/
 }
 
 /*sign up styles*/
-#signup{
+#signup {
     background: url('../images/signup-image.webp');
     background-position: 75%;
     background-size: cover;
-  
+
     padding: 20px 10% 0 10%;
     width: 100%;
     flex-grow: 1;
-    align-self:center;
+    align-self: center;
 }
-#signup-form{
-    color:#ffffff;
-    background-color:rgba(60,60,60,0.6);
-    padding: 30px; 
-}
-#signup-form>h2{
 
-    color:#fafafa;
+#signup-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+}
+
+#signup-form>h2 {
+
+    color: #fafafa;
     margin-bottom: 20px;
 }
-.text-input{
+
+.text-input {
     background-color: transparent;
     color: #fafafa;
     border: 1px solid #fafafa;
     border-radius: 2px;
-    margin:5px 0 20px 0;
+    margin: 5px 0 20px 0;
     padding: 0 5px;
     width: 100%;
     height: 25px;
 
 }
-.radio-buttons{
+
+.radio-buttons {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    
+
 }
-.join-button{
+
+.join-button {
     border-radius: 2px;
     background-color: #454b1b;
-    color:#fafafa;
+    color: #fafafa;
     font-size: 100%;
     padding: 15px 32px;
-    margin-top:20px;
-    
+    margin-top: 20px;
+
 }
+
 /*Footer*/
 #social-networks {
     text-align: center;
@@ -290,13 +300,16 @@ main {
     color: #fafafa;
     /* override header color to white for contrast against dark background image, h3 color set previous by h1,h2,h3 style in header above*/
 }
-@media screen and (min-width: 576px){
+
+@media screen and (min-width: 576px) {
     #photos {
-    column-count:2; /* two columns for small screens and up */
-    column-gap:0px; /* 0 gap between columns */
+        column-count: 2;
+        /* two columns for small screens and up */
+        column-gap: 0px;
+        /* 0 gap between columns */
     }
 }
-    
+
 
 /* Media Query: tablet and up*/
 @media screen and (min-width: 768px) {
@@ -359,8 +372,32 @@ main {
     }
 
     #photos {
-        column-count:3; /* three columns for medium screens and up */
-        column-gap:0px; /* 0px gap between columns */
+        column-count: 3;
+        /* three columns for medium screens and up */
+        column-gap: 0px;
+        /* 0px gap between columns */
+    }
+
+    /* Form */
+    #signup {
+        background-position: center;
+        position: relative;
+    }
+
+    #signup-form {
+        max-width: 400px;
+        position: absolute;
+        left: 10%;
+        top: 150px;
+    }
+
+    .text-input:hover {
+        border-color: #f16c6b;
+    }
+
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
     }
 }
 
@@ -370,9 +407,12 @@ main {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
+
     #photos {
-        column-count:4; /* four columns for large screens and up */
-        column-gap:0px; /* 0px gap between columns */
+        column-count: 4;
+        /* four columns for large screens and up */
+        column-gap: 0px;
+        /* 0px gap between columns */
     }
 
 }
