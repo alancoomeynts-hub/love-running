@@ -1,22 +1,19 @@
-/*Google Fonts*/
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
-
-
-/* Asterisk wildcard selector to override default styles added by the browser*/
-
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* general style*/
+/* General styles */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* generic project style*/
+    /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
@@ -27,7 +24,6 @@ h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
-    /*adds spacing between characters */
     color: #252525;
 }
 
@@ -35,7 +31,7 @@ h3 {
     display: none;
 }
 
-/*Header*/
+/* Header */
 header {
     background-color: #ffffff;
     padding: 0 1rem;
@@ -43,59 +39,45 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
-    /* box shadow adds shadow effects around element frame. 1st value is horizontal offset negative offset to left, positive to the right. 
-    not needed as element is full width. 2nd value is vertical offset (positive below element, negative above).
-    3rd value sets blur, how hard or sof tthe shaodw is. 4th is color value. in this we use color that match body text color.*/
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
 
 header a {
-    /* any anchor descended from a header element*/
     text-decoration: none;
-    /* remove line under title*/
     color: inherit;
-    /* inherit color from body, remove default text color of links added by the browser.*/
 }
-
 
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
-
 }
 
 #menu>li {
-    /* target list elements descending from element with ID menu*/
     margin-bottom: 1em;
-
 }
 
 .active {
     border-bottom: 1px solid #3a3a3a;
-
 }
 
-/*navbar styles with dropdown toggle */
+/* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
-    /*remove nav from normal page flow structure. Positioned to the nearest positioned ancestor i.e. the header */
     background-color: #ffffff;
     width: 100%;
-    box-shadow: 0 2px 2px #3a3a3a;
-    padding: 0 1rem;
     left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
     display: none;
     top: 100%;
-    /* this tells an element to start at the bottom of its parent */
 }
 
-/* Nav Toggle */
+/* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
-
 }
 
 #nav-toggle {
@@ -104,34 +86,30 @@ nav {
 
 .nav-toggle-label {
     font-size: 2rem;
-
 }
 
-/*main*/
+/* Main content */
 main {
-
+    /* Enlarge main element to push footer down*/
     flex: 1 0 auto;
-
-    /* (note default for flex grow is 0 and flex shrink is 0) prevent main element from shrinking below initial size even if container is smaller.
-     Sized according to content and can grow to fill space proportionally with other elements in flex box*/
-
+    /* Add margin at the top to prevent content from being covered by the header */
     margin-top: 47px;
-    /* add margin top to main to prevent content being hidden behind fixed header */
+    /* Enable flex properties for child elements */
     display: flex;
     flex-direction: column;
 }
 
+/* Hero section */
 #hero {
-    height: 766px;
+    height: 600px;
     width: 100%;
-    background: url(../images/hero-image.webp) no-repeat center center/cover;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
     position: relative;
-
 }
 
 #cover-text {
-    background-color: rgba(241, 109, 107, 0.7);
-    /* semi transparent background color using rgba */
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
     position: absolute;
     bottom: 30px;
@@ -144,21 +122,18 @@ main {
 #cover-text>h2,
 #cover-text>h3 {
     color: #ffffff;
-
 }
 
-/* Reasons Section*/
+/* Reasons section */
 #reasons {
-    margin: 20px auto;
     width: 90%;
-
+    margin: 20px auto;
 }
 
 #reasons h2 {
-    font-size: 280%;
     margin-bottom: 20px;
     text-align: center;
-
+    font-size: 280%;
 }
 
 #benefits-physical>div,
@@ -181,43 +156,63 @@ main {
     height: 90vw;
     width: 90vw;
     margin-bottom: 20px;
-    /* make div a square based on viewport width */
+    /* Makes the square image into a circle */
+    border-radius: 50%;
     max-width: 300px;
     max-height: 300px;
-    border-radius: 50%;
-    /* make div a circle */
 }
 
 #benefits-image {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-/* Gallery Page Styles*/
+/* Meetup Times section */
+#times {
+    background: url('../images/dublin-city.webp') no-repeat center/cover;
+    /* Handles responsivity without the need for a media query */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#times div {
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 15px;
+    text-align: center;
+    /* This will not wrap on screens of less than 400px wide.
+    Each div will expand to fill the available space on its row */
+    flex-basis: 200px;
+    flex-grow: 1;
+    /* Creates a grid of meetup time dives over the background image */
+    border: 2px solid white;
+}
+
+#times h3 {
+    /* Override the heading colour set in general styles */
+    color: #fafafa;
+}
+
+/* Gallery page */
 #photos img {
     width: 100%;
-    /* this takes care of overflow caused by default images.Set width to width of screen*/
     line-height: 1em;
-    /* set line height to normal to prevent gaps below images. Ensure alt text not displaced.*/
 }
 
 #photos {
     line-height: 0;
-    /* remove small gaps between images caused by inline-block display*/
 }
 
-/*sign up styles*/
+/* Form */
 #signup {
-    background: url('../images/signup-image.webp');
-    background-position: 75%;
+    background-image: url("../images/signup-image.webp");
     background-size: cover;
-
+    background-position: 75%;
     padding: 20px 10% 0 10%;
-    width: 100%;
     flex-grow: 1;
-    align-self: center;
 }
+
 
 #signup-form {
     color: #ffffff;
@@ -225,109 +220,78 @@ main {
     padding: 30px;
 }
 
-#signup-form>h2 {
 
+#signup-form>h2 {
     color: #fafafa;
     margin-bottom: 20px;
 }
 
+
 .text-input {
-    background-color: transparent;
+    background: transparent;
     color: #fafafa;
-    border: 1px solid #fafafa;
-    border-radius: 2px;
-    margin: 5px 0 20px 0;
-    padding: 0 5px;
     width: 100%;
     height: 25px;
-
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
 }
+
 
 .radio-buttons {
     width: 100%;
     display: flex;
     justify-content: space-between;
-
 }
+
 
 .join-button {
+    margin-top: 20px;
     border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
     background-color: #454b1b;
     color: #fafafa;
-    font-size: 100%;
-    padding: 15px 32px;
-    margin-top: 20px;
-
 }
 
-/*Footer*/
+/* Footer */
 #social-networks {
     text-align: center;
     padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
-
 }
 
 #social-networks i {
     font-size: 160%;
-    /* increase icon size icons treated as text*/
     padding: 5%;
     color: #3a3a3a;
 }
 
-#times {
-    background: url('../images/dublin-city.webp') no-repeat center center/cover;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#times div {
-    color: #fafafa;
-    background-color: rgb(0, 0, 0, 0.6);
-    /* semi transparent black background to provide contrast for text*/
-    padding: 15px;
-    text-align: center;
-    /* this will not wrap below 400px. Each div expands to fill available space on the row */
-    flex-basis: 200px;
-    flex-grow: 1;
-    border: 2px solid white;
-    /* add white border to separate divs into a grid */
-}
-
-#times h3 {
-    color: #fafafa;
-    /* override header color to white for contrast against dark background image, h3 color set previous by h1,h2,h3 style in header above*/
-}
-
+/* Media query: large or landscape phones (576px and up) */
 @media screen and (min-width: 576px) {
     #photos {
         column-count: 2;
-        /* two columns for small screens and up */
-        column-gap: 0px;
-        /* 0 gap between columns */
+        column-gap: 0;
     }
 }
 
-
-/* Media Query: tablet and up*/
+/* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
-    /*Header*/
+    /* Header */
     nav {
+        display: block;
         position: relative;
-        /*set position back to relative for larger screens */
         box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
-        display: block;
-
     }
 
     #menu {
         display: flex;
-
     }
 
     #menu>li {
@@ -344,16 +308,19 @@ main {
         margin: 0 0.5rem;
     }
 
+    /* Main content */
     main {
+        /* Push main content down to accommodate larger header */
         margin-top: 79px;
-        /* increase top margin for larger header on larger screens */
     }
 
+    /* Hero */
     #cover-text {
         width: 300px;
         right: 50px;
     }
 
+    /* Reasons section */
     #benefits-physical,
     #benefits-mental {
         display: flex;
@@ -371,11 +338,9 @@ main {
         align-self: flex-end;
     }
 
+    /* Gallery */
     #photos {
         column-count: 3;
-        /* three columns for medium screens and up */
-        column-gap: 0px;
-        /* 0px gap between columns */
     }
 
     /* Form */
@@ -401,23 +366,21 @@ main {
     }
 }
 
-/* Media Query: laptop and up*/
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
 
+    /* Gallery */
     #photos {
         column-count: 4;
-        /* four columns for large screens and up */
-        column-gap: 0px;
-        /* 0px gap between columns */
     }
-
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
+
+    /* Reasons section */
     #benefits {
         display: flex;
         flex-direction: row;
